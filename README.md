@@ -76,3 +76,5 @@ the AOP prediction.
 1. Install the required packages:
    ```bash
    pip install numpy pandas matplotlib scikit-learn xgboost lightgbm optuna shap joblib openpyxl
+
+That’s all you need. If you later decide to include additional figures (e.g., residuals, ECDF), just add a short paragraph under a new section. But for now, the README focuses exactly on the three plots you requested.
