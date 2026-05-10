@@ -51,7 +51,7 @@ Compares the predicted AOP values against the true measured values for the best
 ensemble model. A perfect model would align all points on the dashed diagonal line.
 The tight clustering around the diagonal indicates high predictive accuracy.
 
-![Parity Plot](images/parity_plot.png)
+![Parity Plot](images/parity.png)
 
 ### 2. Calibration by Predicted Deciles
 The test set is divided into **10 deciles** based on the predicted AOP. For each decile
@@ -59,7 +59,7 @@ the mean predicted value is plotted against the mean observed value. If the mode
 well calibrated, the points lie on the diagonal. This plot reveals whether the model
 tends to over‑ or under‑predict in certain value ranges.
 
-![Calibration Plot](images/calibration_deciles.png)
+![Calibration Plot](images/calibration.png)
 
 ### 3. Feature Importance (Permutation Importance)
 The **permutation importance** (mean drop in R² when a feature is randomly shuffled)
@@ -67,7 +67,7 @@ is computed for all models on the test set. The chart below shows the top featur
 for the final ensemble. It highlights which gas components most strongly influence
 the AOP prediction.
 
-![Feature Importance](images/permutation_importance.png)
+![Feature Importance](images/importance.png)
 
 ---
 
