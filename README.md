@@ -89,7 +89,7 @@ Parity plots for all six models compare predicted AOP against measured values on
 Stacking-Huber and Blending-Huber maintain the tightest clustering across the full AOP range (2,000–9,500 psia) with no perceptible directional bias at any pressure interval. Extra Trees is effectively indistinguishable from the ensembles in the mid-range (4,000–7,000 psia), with isolated outliers only at the upper extreme where experimental data density decreases. Random Forest exhibits the broadest scatter, with systematic underestimation at lower AOP values and overestimation in the upper range — a hallmark of bagging-based mean regression under distributional imbalance.
 
 <div align="center">
-  <img src="images/parity.jpg" alt="Parity Plot — Observed vs Predicted AOP" width="80%"/>
+  <img src="images/parity.png" alt="Parity Plot — Observed vs Predicted AOP" width="80%"/>
   <br/>
   <sub><b>Figure 1.</b> Parity plots for all six models. Points on the dashed diagonal indicate perfect prediction.</sub>
 </div>
@@ -105,7 +105,7 @@ XGBoost exhibits near-perfect calibration across all deciles, with predictions t
 Random Forest follows a pronounced S-shaped calibration curve: observed AOP exceeds predicted values in the lower deciles (< ~4,000 psia) and falls below them in the upper deciles (> ~7,000 psia). This variance shrinkage has direct **operational implications** — applied without correction, Random Forest would systematically underestimate asphaltene risk at lower reservoir pressures and overestimate it at higher pressures, potentially leading to incorrect inhibition program design. LightGBM exhibits a milder version of the same pattern.
 
 <div align="center">
-  <img src="images/calibration.jpg" alt="Calibration Plot by Predicted Decile" width="80%"/>
+  <img src="images/calibration.png" alt="Calibration Plot by Predicted Decile" width="80%"/>
   <br/>
   <sub><b>Figure 2.</b> Calibration curves by predicted decile. Ideal calibration corresponds to the diagonal.</sub>
 </div>
@@ -123,7 +123,7 @@ The **ensemble models** reconcile this disagreement in a physically grounded way
 **Temperature** and **saturation pressure** emerge consistently as second-tier contributors. SARA-derived variables — particularly Saturates and Resins — occupy the mid-importance range, corroborating the colloidal stabilization framework in which resins serve as natural peptizing agents for asphaltene aggregates in crude oil.
 
 <div align="center">
-  <img src="images/importance.jpg" alt="Permutation Feature Importance" width="80%"/>
+  <img src="images/importance.png" alt="Permutation Feature Importance" width="80%"/>
   <br/>
   <sub><b>Figure 3.</b> Permutation importance for all models. Higher values indicate greater influence on predictive accuracy.</sub>
 </div>
